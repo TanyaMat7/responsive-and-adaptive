@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            background: rgba(133, 126, 126, 0.76);
+            grid-area: header;
+            text-align: center;
+        }
+
+        .main{
+            background: rgba(251, 255, 0, 0.925);
+            grid-area: main;
+            text-align: center;
+            max-width:100% ;
+        }
+
+        .aside{
+            background: rgb(17, 212, 17);
+            grid-area: aside;
+        }
+
+        .footer{
+            display: flex;
+            background:rgba(133, 126, 126, 0.76);
+            grid-area: footer;
+            text-align: center;
+            height: fit-content;
+        }
+
+        .conteiner{
+            display: grid;
+            grid-template-columns:50% 30%;
+            grid-template-rows: 10% 1fr 10%;
+            height: 100vh;
+            width:100vw;
+            grid-template-areas: 
+            "header header header header"
+            "main main main aside"
+            "footer footer footer footer";
+        }
+
+        div{
+            line-height: 100px;
+            font-size: 100%;
+            font-size: 40px;       
+        }
+
+        .blok{
+            float: left;
+            line-height: 100px;
+            font-size: 100%;
+            margin-top:3%;
+            width:44%;
+            }
+
+        .content-1{
+            grid-row:2/3;
+            grid-column: 2/4;
+            background: white;
+            text-align: center;
+            display: inline-block;
+            padding: 2%;
+            margin: 2%;
+            width: 30%;
+        }
+
+        .content-2{
+            grid-row:3/4;                
+            grid-column: 2/3;
+            display: inline-block;
+            background: white;
+            padding: 2%;
+            margin: 2%;
+            width: 30%;
+        }
+
+        .content-3{
+            grid-row: 3/4;
+            grid-column: 3/4;
+            background: white;
+            margin: 3%;
+            padding: 3%;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="conteiner"> 
+        <header class="header">Шапка страницы</header>
+        <main class="main">Основная часть
+        <br><div class="content-1">Еще 1</div>
+        <div class="content-2">Еще 2</div>
+        <div class="content-3">Еще 3</div>
+    </main>
+        <aside class="aside">Боковая панель</aside>
+        <footer class="footer">
+            <div class="blok">Секция футера 1</div>
+            <div class="blok">Секция футера 2</div>
+            <div class="blok">Секция футера 3</div>
+            <div class="blok">Секция футера 4</div>
+        </footer>
+</body>
+</html>
